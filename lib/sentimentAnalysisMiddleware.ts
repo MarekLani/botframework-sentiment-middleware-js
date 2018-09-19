@@ -62,7 +62,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
      */
     public async onTurn(context: TurnContext, next: any): Promise<any> {
         try {
-            //await this.getSentiment(context);
+            await this.getSentiment(context);
         } catch (error) {
             return Promise.reject(error);
 

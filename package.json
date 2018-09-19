@@ -1,9 +1,9 @@
 {
   "name": "botbuilder-sentimentmiddleware",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Middleware providing sentiment value for incoming messages",
   "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -13,8 +13,8 @@
   },
   "bugs": {
     "url": "https://github.com/MarekLani/botframeworksentimentmiddlewarejs/issues"
-   },
-   "homepage":"https://github.com/MarekLani/botframeworksentimentmiddlewarejs#readme",
+  },
+  "homepage": "https://github.com/MarekLani/botframeworksentimentmiddlewarejs#readme",
   "keywords": [
     "botbuilder",
     "botframework",

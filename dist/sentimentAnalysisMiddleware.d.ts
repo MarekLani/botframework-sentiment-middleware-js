@@ -40,7 +40,7 @@ export declare class SentimentAnalysisMiddleware extends MiddlewareSet {
      * @param context The context containing the message to score.
      * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
      */
-    getSentiment(message: string): Promise<number>;
+    getSentiment(context: TurnContext): Promise<number>;
     /**
      * Gets the sentiment analysis score for the given message.
      *

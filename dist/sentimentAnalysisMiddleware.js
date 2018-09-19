@@ -42,7 +42,7 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
     onTurn(context, next) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                //await this.getSentiment(context);
+                yield this.getSentiment(context);
             }
             catch (error) {
                 return Promise.reject(error);
@@ -57,42 +57,23 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
     getSentimentScore(context) {
         return context.services.get(this.cacheKey);
     }
-    // /**
-    //  * Runs the message in the given context through the Sentiment Analysis API.
-    //  * 
-    //  * @param context The context containing the message to score.
-    //  * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
-    //  */
-    // public async getSentiment(context: TurnContext): Promise<number> {
-    //     return new Promise<number>(async (resolve, reject) => {
-    //         if (context.activity.type !== 'message') {
-    //             reject('The activity is not of type message');
-    //             return;
-    //         }
-    //         let message = context.activity.text;
-    //         let score = 0
-    //         try {
-    //             score = await this.detectSentimentScore(message);
-    //             context.services.set(this.cacheKey,score);
-    //             resolve(score);
-    //         } catch (error) {
-    //             reject(`Failed to score the message: ${error}`);
-    //         }
-    //     });
-    // }
     /**
      * Runs the message in the given context through the Sentiment Analysis API.
      *
      * @param context The context containing the message to score.
      * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
      */
-    getSentiment(message) {
+    getSentiment(context) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                if (context.activity.type !== 'message') {
+                    reject('The activity is not of type message');
+                }
+                let message = context.activity.text;
                 let score = 0;
                 try {
                     score = yield this.detectSentimentScore(message);
-                    //context.services.set(this.cacheKey,score);
+                    context.services.set(this.cacheKey, score);
                     resolve(score);
                 }
                 catch (error) {
