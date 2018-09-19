@@ -1,0 +1,38 @@
+{
+  "name": "botbuilder-sentimentmiddleware",
+  "version": "1.0.0",
+  "description": "Middleware providing sentiment value for incoming messages",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarekLani/botframeworksentimentmiddlewarejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarekLani/botframeworksentimentmiddlewarejs/issues"
+   },
+   "homepage":"https://github.com/MarekLani/botframeworksentimentmiddlewarejs#readme",
+  "keywords": [
+    "botbuilder",
+    "botframework",
+    "v4",
+    "chatbots",
+    "bots",
+    "sentiment",
+    "analysis",
+    "text",
+    "analytics",
+    "middleware"
+  ],
+  "author": "Marek Lani mlani@microsoft.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/request-promise-native": "^1.0.15",
+    "botbuilder": "^4.0.0-preview1.1",
+    "request-promise-native": "^1.0.5",
+    "typescript": "^3.1.0-dev.20180919"
+  }
+}
