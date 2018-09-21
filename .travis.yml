@@ -1,0 +1,12 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+script:
+- npm run setup
+- npm run build
+deploy:
+  provider: npm
+  email: mareklani@outlook.com
+  api_key:
+    secure: eLrxXusfAYPY9OoKN9oFJnU2QvXwpXUK1JlS8bu8zBYhqPpS97IqAm+4xz2x3eehDD6/Oks9axcJT+jm23pyMoBTDc4iYwcQw+0j4on5igA1ZQPhjrBQ7VL1/7hpscOc4x0v3b56ip2gLWOF4sVlJux+0b21FrFD5SHlz4AmxIaEcsaXscmu20wRFNM5IKzpveFUlS5tL2IMCKP/bmyisud0QxR8M9yqofz0Iv/N30WxBwji1Twn4SvwfBMYZ0UHfLWbamjKqHzATkP2kR0UHU8jylBs3Gr7xtGbWRYZMC2uY0ECrgddgZ8fwQb48Qmf9IFTFQtyOPfbAzVqjiylqXOZEafbyCp8GWyQm8h0V2eDJVgg47YAedC+RGUx2FFTG8D1InwTFWv8C5m5z3qxqzF3EXJYmakl9iz2+H8NGtF+AUdbgDqYTybT6Ctzog4ctjpouhSN5TrnT0jg4e+QiR7UBaqUiHTB4d4stpxrAjz64Lj1nk+sP19KWyV5LKSzNShzQe3yQOCsRdSvQLXxBTRL73YGn6UqfcysS2W1eLyC/1GXOIkqxt9+9lz7KIYQTE9PcE7S6Aw5PXHr9BBk6wS1Pyj5cSAk2S/vuhkvXJ4GCMCkTY1C63DUe1WlBLFHRwRG1Whb4eIfnSqiRegzXyIuRDVbs5+BUv7CMINMkgc=
