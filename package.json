@@ -7,18 +7,15 @@
   "scripts": {
     "setup": "npm install",
     "build": "tsc",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "standard": "standard index.js",
-    "test": "nyc ./node_modules/.bin/ava -v"
+    "standard": "standard index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/BotBuilderCommunity/botbuilder-community-js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarekLani/botframeworksentimentmiddlewarejs.git"
+    "url": "https://github.com/BotBuilderCommunity/botbuilder-community-js.git"
   },
-  "bugs": {
-    "url": "https://github.com/MarekLani/botframeworksentimentmiddlewarejs/issues"
-  },
-  "homepage": "https://github.com/MarekLani/botframeworksentimentmiddlewarejs#readme",
   "keywords": [
     "botbuilder",
     "botframework",
@@ -31,20 +28,23 @@
     "analytics",
     "middleware"
   ],
-  "author": "Marek Lani mlani@microsoft.com",
+  "contributors": [
+    "Bot Builder Community",
+    "Marek Lani mlani@outlook.com"
+  ],  
   "license": "MIT",
   "dependencies": {
     "@types/request-promise-native": "^1.0.15",
-    "botbuilder": "^4.0.0-preview1.1",
+    "botbuilder": "^4.0.6",
     "request-promise-native": "^1.0.5",
-    "typescript": "^3.1.0-dev.20180919"
+    "typescript": "^3.1.0-rc.20180911"
   },
   "devDependencies": {
     "ava": "^0.15.2",
     "co-exec": "^1.0",
     "codecov": "^1.0.1",
     "ghooks": "^1.2.4",
-    "nyc": "^7.0.0",
+    "nyc": "^13.1.0",
     "standard": "^7.1.2"
   },
   "config": {

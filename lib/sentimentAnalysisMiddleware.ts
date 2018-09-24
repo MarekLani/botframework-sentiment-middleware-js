@@ -62,7 +62,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
      */
     public async onTurn(context: TurnContext, next: any): Promise<any> {
         try {
-            await this.getSentiment(context);
+            await this.getSentimentScore(context);
         } catch (error) {
             return Promise.reject(error);
 
@@ -74,7 +74,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
      * 
      * @paran context TurnContext
     */
-    getSentimentScore(context: TurnContext)
+    sentimentScore(context: TurnContext)
     {
         return context.services.get(this.cacheKey);
     }
@@ -85,7 +85,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
      * @param context The context containing the message to score.
      * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
      */
-    public async getSentiment(context: TurnContext): Promise<number> {
+    public async getSentimentScore(context: TurnContext): Promise<number> {
         return new Promise<number>(async (resolve, reject) => {
             if (context.activity.type !== 'message') {
                 reject('The activity is not of type message');
