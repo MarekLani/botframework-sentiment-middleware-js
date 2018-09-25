@@ -6,8 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "setup": "npm install",
-    "build": "tsc",
-    "standard": "standard index.js"
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/BotBuilderCommunity/botbuilder-community-js/issues"
@@ -48,8 +47,5 @@
     "standard": "^7.1.2"
   },
   "config": {
-    "ghooks": {
-      "pre-commit": "npm run standard"
-    }
   }
 }

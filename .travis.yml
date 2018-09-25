@@ -5,9 +5,14 @@ node_js:
 script:
 - npm run setup
 - npm run build
+
+after_success:
+  - npm pack
+
 deploy:
   provider: npm
   email: mareklani@outlook.com
+  skip_cleanup: true
   on:
     tags: true
   api_key:
