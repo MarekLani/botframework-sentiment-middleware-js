@@ -4,7 +4,7 @@
 
 | Branch | Status                                                       | Recommended NPM package version                              |
 | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| master | [![Build status](https://api.travis-ci.com/MarekLani/botframework-sentiment-middleware-js.svg?branch=master)](https://travis-ci.com/MarekLani/botframework-sentiment-middleware-js/) | [![NPM package version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.0.3&x2=0)](https://www.npmjs.com/package/botbuilder-sentimentmiddleware) |
+| master | [![Build status](https://api.travis-ci.org/MarekLani/botframework-sentiment-middleware-js.svg?branch=master)](https://travis-ci.org/MarekLani/botframework-sentiment-middleware-js/) | [![NPM package version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.0.3&x2=0)](https://www.npmjs.com/package/botbuilder-sentimentmiddleware) |
 
 ### Description
 This piece of middleware will get sentiment score of each incoming message text using Cognitive Services Text Analytics API and therefore requires a key. There is a free tier which meets most demo/PoC needs.  You can get more info at https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/
