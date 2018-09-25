@@ -76,7 +76,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
     */
     sentimentScore(context: TurnContext)
     {
-        return context.services.get(this.cacheKey);
+        return context.turnState.get(this.cacheKey);
     }
 
     /**
@@ -96,7 +96,7 @@ export class SentimentAnalysisMiddleware extends MiddlewareSet {
             let score = 0
             try {
                 score = await this.detectSentimentScore(message);
-                context.services.set(this.cacheKey,score);
+                context.turnState.set(this.cacheKey,score);
                 resolve(score);
             } catch (error) {
                 reject(`Failed to score the message: ${error}`);
