@@ -2,8 +2,6 @@
 
 ### Build status
 
-NOTE!:  latest changes were not made part of npm package yet, because of this issue: https://github.com/Microsoft/botbuilder-js/issues/484 
-
 | Branch | Status                                                       | Recommended NPM package version                              |
 | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | master | [![Build status](https://api.travis-ci.com/MarekLani/botframework-sentiment-middleware-js.svg?branch=master)](https://travis-ci.com/MarekLani/botframework-sentiment-middleware-js/) | [![NPM package version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.0.3&x2=0)](https://www.npmjs.com/package/botbuilder-sentimentmiddleware) |
