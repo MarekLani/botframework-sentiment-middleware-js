@@ -3,12 +3,12 @@
 	  "target": "ES2015",
 	  "module": "commonjs",
 	  "declaration": true,
-	  "outDir": "./dist",
+	  "outDir": "./lib",
 		"strict": true,
 		"types" : ["node"],
 		"sourceMap": true,
 	},
   "include": [
-    "lib/**/*"
+    "src/**/*"
 	]
 }

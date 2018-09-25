@@ -1,9 +1,9 @@
 {
   "name": "botbuilder-sentimentmiddleware",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Middleware providing sentiment value for incoming messages",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "setup": "npm install",
     "build": "tsc"
