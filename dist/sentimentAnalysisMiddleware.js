@@ -42,7 +42,7 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
     onTurn(context, next) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                yield this.getSentiment(context);
+                yield this.getSentimentScore(context);
             }
             catch (error) {
                 return Promise.reject(error);
@@ -54,8 +54,8 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
      *
      * @paran context TurnContext
     */
-    getSentimentScore(context) {
-        return context.services.get(this.cacheKey);
+    sentimentScore(context) {
+        return context.turnState.get(this.cacheKey);
     }
     /**
      * Runs the message in the given context through the Sentiment Analysis API.
@@ -63,7 +63,7 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
      * @param context The context containing the message to score.
      * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
      */
-    getSentiment(context) {
+    getSentimentScore(context) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
                 if (context.activity.type !== 'message') {
@@ -73,7 +73,7 @@ class SentimentAnalysisMiddleware extends botbuilder_1.MiddlewareSet {
                 let score = 0;
                 try {
                     score = yield this.detectSentimentScore(message);
-                    context.services.set(this.cacheKey, score);
+                    context.turnState.set(this.cacheKey, score);
                     resolve(score);
                 }
                 catch (error) {

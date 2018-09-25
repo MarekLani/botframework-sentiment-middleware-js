@@ -33,14 +33,14 @@ export declare class SentimentAnalysisMiddleware extends MiddlewareSet {
      *
      * @paran context TurnContext
     */
-    getSentimentScore(context: TurnContext): any;
+    sentimentScore(context: TurnContext): any;
     /**
      * Runs the message in the given context through the Sentiment Analysis API.
      *
      * @param context The context containing the message to score.
      * @returns The sentiment analysis score of the message in the given context or the moving average of scores.
      */
-    getSentiment(context: TurnContext): Promise<number>;
+    getSentimentScore(context: TurnContext): Promise<number>;
     /**
      * Gets the sentiment analysis score for the given message.
      *
